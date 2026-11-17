@@ -309,6 +309,8 @@ exit /b %errorlevel%
         Write-Host '  (run the installer again with -RemoteAdmin to allow other machines)'
     }
     if ($tokenValue) { Write-Host "  Setup token (enter it on the first page of the wizard): $tokenValue" }
+    # Without -Service this is usually a personal PC, where SQLite needs no database server.
+    if (-not $Service) { Write-Host '  Database: on a personal PC, choose SQLite in the setup wizard; it needs no database server.' }
     Write-Host "  Upgrade: run this installer again; $Dir\state is kept."
 } finally {
     Remove-Item -LiteralPath $Work -Recurse -Force -ErrorAction SilentlyContinue
