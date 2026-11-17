@@ -45,7 +45,7 @@ if ($Help) {
     @'
 Usage: install.ps1 [options]
 
-  -Version <tag>   release tag to install, e.g. v0.3.2 (default: the latest release)
+  -Version <tag>   release tag to install, e.g. v0.4.0 (default: the latest release)
   -Dir <path>      install directory (default: C:\BubbleFighterFantasy)
   -Arch <x64|arm64>  package to install (default: this processor)
   -NoRuntime       fail instead of downloading the ASP.NET Core Runtime 10 when it is missing
